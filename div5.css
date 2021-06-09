@@ -1,0 +1,23 @@
+.leftdiv{
+    color:white;
+    background-color: green;
+    float:left;
+}
+.middlediv{
+    color:red;
+    background-color: gray;
+    float:left;
+}
+.rightdiv{
+    color:black;
+    background-color:green;
+    float:left;
+}
+div{
+    padding:5%;
+    width:23%;
+    border:solid black;
+}
+p{
+    text-align: justify;
+}
