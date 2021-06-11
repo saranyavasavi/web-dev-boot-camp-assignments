@@ -1,0 +1,51 @@
+<!--create  an input that reads the name,aadhar number,address and displays it in the table format -->
+<!doctype html>
+<html>
+	<head>
+		<title>Table example </title>
+		<style>
+			td {
+				color: orangered;
+			}
+			label {
+				width: 110px;
+				display: inline-block;
+			}
+		</style>
+	</head>
+	<body>
+		<fieldset>
+			<legend>Details</legend>
+			<label>Name: </label>
+			 <input type="text" id="uname" /><br><br>
+			 <label>Aadhar Number:</label>
+			 <input type="text" id="anum" /><br><br>
+			 <label>Address:</label>
+			 <textarea rows="3" cols="30" id="address"></textarea><br><br>
+			<button onclick="readdata()">Submit</button>
+		</fieldset><br><br>
+		<h1>Final List</h1>
+		<table border="1">
+			<tr>
+				<th>Name</th>
+				<th>Aadhar Number</th>
+				<th>Address</th>
+			</tr>
+			<tr>
+				<td id="name"> No Data </td>
+				<td id="number"> No Data </td>
+				<td id="add"> No Data </td>
+			</tr>
+		</table>
+		<script>
+			function readdata(){
+				var name=document.getElementById("uname").value;
+				var aadhar=document.getElementById("anum").value;
+				var address=document.getElementById("address").value;
+				document.getElementById("name").innerHTML=name;
+				document.getElementById("number").innerHTML=aadhar;
+				document.getElementById("add").innerHTML=address;
+				}
+		</script>
+	</body>
+</html>

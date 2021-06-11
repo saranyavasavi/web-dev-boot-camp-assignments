@@ -1,0 +1,52 @@
+<!--create an input that reads from radio,chechkbox which displays the selected data in separate paragraphs -->
+<!doctype html>
+<html>
+	<head>
+		<title>Radio and chechbox buttons</title>
+		<style>
+			p {
+				color: darkred;
+			}
+		</style>
+	</head>
+	<body>
+		
+			<h1>Gender</h1>
+			<input type="radio" id="gender" name="gender" value="male" />Male
+			<input type="radio" id="gender" name="gender" value="female" />Female<br><br>
+			<h1>Favaroite Subject</h1>
+			<input type="checkbox" id="Maths" value="Maths"/>Maths<br>
+			<input type="checkbox" id="Physics" value="Physics"/>Physics<br>
+			<button onclick="readData()"> Submitt </button>
+			<p id="outcome"></p>
+			<p id="result"></p>
+		<script>
+			function readData(){
+				var a = document.getElementsByName('gender');
+				var Maths=document.getElementById('Maths');
+				var Physics=document.getElementById('Physics');
+				var res;
+				var out;
+				for(i=0;i<a.length;i++) {
+					if(a[i].checked)
+						out='female';
+					else
+						out='male';
+				}
+				document.getElementById('result').innerHTML=res;
+				if(Maths.checked == true && Physics.checked == true) {
+					res='Maths,physics';
+				} else if(Maths.checked == false && Physics.checked == true) {
+					res=' physics only';
+				} else if(Maths.checked == true && Physics.checked == false) {
+					res='maths Only';
+				} else {
+					res = 'None';
+				}
+				document.getElementById('result').innerHTML=res;
+				document.getElementById('outcome').innerHTML=out;
+
+			}
+		</script>
+	</body>
+</html>

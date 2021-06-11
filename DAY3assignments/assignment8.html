@@ -1,0 +1,35 @@
+<!--create an input tags that reads from the data list through select tag and display the data in the paragraph tag of HTML -->
+<!doctype html>
+<html>
+	<head>
+		<title>Data list</title>
+		<style>
+			p {
+				color: indianred;
+				font-size: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<h4>Select your Country</h4>
+		<select id="country">
+			<option>India</option>
+			<option>America</option>
+			<option>China</option>
+			<option>Australia</option>
+			<option>Newzland</option>
+			<option>Japan</option>
+			<option>Canada</option>
+			<option>London</option>
+			<option>Africa</option>
+		</select>
+		<button onclick="readData()">Submit</button>
+		<p id="outcome"></p>
+		<script>
+			function readData(){
+				var c=document.getElementById("country").value;
+				document.getElementById("outcome").innerHTML=c;
+			}
+		</script>
+	</body>
+</html>
